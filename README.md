@@ -9,13 +9,12 @@ git clone https://github.com/jlg-formation/dtv-july-2023.git github-charts
 cd github-charts
 npm install
 npx serve
+
 ```
 
 Open a browser and go to
 
-```
-http://localhost:3000
-```
+<a href="http://localhost:3000" target="_blank">http://localhost:3000</a>
 
 ## Author
 
