@@ -1,4 +1,4 @@
-import * as echarts from "echarts";
+import * as echarts from "./node_modules/echarts/dist/echarts.esm.js";
 
 var chartDom = document.querySelector("div.diagram");
 if (chartDom === null) {
