@@ -12,9 +12,7 @@ npx serve
 
 ```
 
-Open a browser and go to
-
-<a href="http://localhost:3000" target="_blank">http://localhost:3000</a>
+Open a browser and go to http://localhost:3000
 
 ## Author
 
