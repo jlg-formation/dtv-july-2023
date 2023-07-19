@@ -2,7 +2,13 @@
   // recupere le repository.json
   const response = await fetch("./repositories.json");
   const json = await response.json();
-  console.log("json: ", json);
+
+  const repositories = json.items;
+
+  const repos = repositories.map((repository) => ({
+    name: repository.name,
+    stars: repository.stargazers_count,
+  }));
 
   var chartDom = document.querySelector("div.diagram");
   if (chartDom === null) {
@@ -12,14 +18,14 @@
   var option = {
     xAxis: {
       type: "category",
-      data: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+      data: repos.map((r) => r.name),
     },
     yAxis: {
       type: "value",
     },
     series: [
       {
-        data: [120, 200, 150, 80, 70, 110, 130],
+        data: repos.map((r) => r.stars),
         type: "bar",
         showBackground: true,
         backgroundStyle: {
