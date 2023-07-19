@@ -16,6 +16,12 @@
   }
   var myChart = echarts.init(chartDom, "vintage");
   var option = {
+    grid: {
+      top: 10,
+      bottom: 50,
+      left: 200,
+      right: 30,
+    },
     xAxis: {
       type: "value",
     },
