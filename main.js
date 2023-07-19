@@ -17,15 +17,15 @@
   var myChart = echarts.init(chartDom, "vintage");
   var option = {
     xAxis: {
-      type: "category",
-      data: repos.map((r) => r.name),
+      type: "value",
     },
     yAxis: {
-      type: "value",
+      type: "category",
+      data: repos.map((r) => r.name).reverse(),
     },
     series: [
       {
-        data: repos.map((r) => r.stars),
+        data: repos.map((r) => r.stars).reverse(),
         type: "bar",
         showBackground: true,
         backgroundStyle: {
