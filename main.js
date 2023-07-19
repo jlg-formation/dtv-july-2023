@@ -5,10 +5,25 @@
 
   const repositories = json.items;
 
-  const repos = repositories.map((repository) => ({
-    name: repository.name,
+  const filterRepos = repositories.filter(
+    (repo) =>
+      ![
+        "GitHub-Chinese-Top-Charts",
+        "helm",
+        "data-science",
+        "umami",
+        "tui.editor",
+        "charts",
+        "analytics",
+        "sampler",
+      ].includes(repo.name)
+  );
+
+  const repos = filterRepos.map((repository) => ({
+    name: repository.full_name,
     stars: repository.stargazers_count,
   }));
+  console.log("repos: ", repos);
 
   var chartDom = document.querySelector("div.diagram");
   if (chartDom === null) {
@@ -22,12 +37,19 @@
       left: 200,
       right: 30,
     },
+    axisLabel: {
+      color: "black",
+    },
     xAxis: {
       type: "value",
     },
     yAxis: {
       type: "category",
       data: repos.map((r) => r.name).reverse(),
+      axisLabel: {
+        show: true,
+        fontSize: 15,
+      },
     },
     series: [
       {
