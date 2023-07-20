@@ -2,6 +2,14 @@
 
 Shows a list of dataviz library on github
 
+## Prerequisites
+
+The following software must be installed on the marchine
+
+- git
+- nodejs
+- browser (Chrome, Safari, etc.)
+
 ## Install
 
 ```
