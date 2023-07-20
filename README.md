@@ -2,15 +2,18 @@
 
 Shows a list of dataviz library on github
 
-## Prerequisites
+https://jlg-formation.github.io/dtv-july-2023/
+
+## Install on a local environment
+
+### Prerequisites
 
 The following software must be installed on the marchine
 
 - git
 - nodejs
 - browser (Chrome, Safari, etc.)
-
-## Install
+- vscode
 
 ```
 git clone https://github.com/jlg-formation/dtv-july-2023.git github-charts
