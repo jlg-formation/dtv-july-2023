@@ -22,6 +22,11 @@
         "pixijs",
         "metabase",
         "directus",
+        "awesome-datascience",
+        "Data-Science-For-Beginners",
+        "awesome-creative-coding",
+        "best-of-ml-python",
+        "awesome-bigdata",
       ].includes(repo.name)
   );
 
