@@ -1,6 +1,8 @@
 (async function () {
   // recupere le repository.json
-  const response = await fetch("./repositories.json");
+  const response = await fetch(
+    "https://api.github.com/search/repositories?q=stars%3A%3E10000+data-visualization&sort=stars&order=desc"
+  );
   const json = await response.json();
 
   const repositories = json.items;
@@ -16,6 +18,10 @@
         "charts",
         "analytics",
         "sampler",
+        "netdata",
+        "pixijs",
+        "metabase",
+        "directus",
       ].includes(repo.name)
   );
 
