@@ -1,12 +1,12 @@
 div.diagram {
-  height: 40em;
+  height: 30em;
   width: 60em;
   border: 0.1em solid black;
 }
 
 @media screen and (max-width: 600px) {
   div.diagram {
-    height: 40em;
+    height: 30em;
     width: 100%;
     border: 0.1em solid black;
   }
